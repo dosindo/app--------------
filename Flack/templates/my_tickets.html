@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Tickets</title>
+</head>
+<body>
+    <h1>My Tickets</h1>
+    <!-- 표로 예약된 영화표 정보를 표시합니다. -->
+    <table>
+        <tr>
+            <th>Room</th>
+            <th>Movie</th>
+            <th>Date</th>
+        </tr>
+        {% for ticket in tickets %}
+        <tr>
+            <td>{{ ticket[0] }}</td>
+            <td>{{ ticket[1] }}</td>
+            <td>{{ ticket[2].split(" ")[0] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
